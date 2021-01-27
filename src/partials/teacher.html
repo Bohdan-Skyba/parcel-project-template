@@ -1,32 +1,45 @@
-<article class="example">
-  <h1>HTML-фрагменты</h1>
+<section class="section">
+  <div class="container">
+    <h2 class="title">Преподаватель</h2>
+    <div class="teacher">
+      <div class="teacher__left-side">
+        <picture>
+          <source srcset="./images/about/about-img-desktop-01.webp 1x, ./images/about/about-img-desktop-01@2x.webp 2x"
+            media="(min-width: 1200px)" type="image/webp">
+          <source srcset="./images/about/about-img-desktop-01.jpg 1x, ./images/about/about-img-desktop-01@2x.jpg 2x"
+            media="(min-width: 1200px)">
+          <source srcset="./images/about/about-img-tablet-01.webp 1x, ./images/about/about-img-tablet-01@2x.webp 2x"
+            media="(min-width: 768px)" type="image/webp">
+          <source srcset="./images/about/about-img-tablet-01.jpg 1x, ./images/about/about-img-tablet-01@2x.jpg 2x"
+            media="(min-width: 768px)">
+          <source srcset="./images/about/about-img-tablet-01.webp 1x, ./images/about/about-img-tablet-01@2x.webp 2x"
+            media="(min-width: 320px)" type="image/webp">
+          <source srcset="./images/about/about-img-tablet-01.jpg 1x, ./images/about/about-img-tablet-01@2x.jpg 2x"
+            media="(min-width: 320px)">
+          <img class="teacher-img" src="./images/about/about-img-tablet-01.jpg" alt="Елена Морева" />
+        </picture>
+      </div>
+      
+      <div class="teacher__right-side">
+        <h3 class="teacher-name">Елена Морева</h3>
+        <ul class="teacher-skill">
+          <li>Опыт подготовки учеников к ВНО - 6 лет</li>
+          <li>Собственный результат сдачи ВНО - 197 баллов 2 года подряд</li>
+          <li>Сдала на отлично международный аналог ВНО - Кембриджский PET (Preliminary English Test)</li>
+        </ul>
+        <ul class="teacher-education">
+          <li> Высшее образование получила в Институте международных отношений НАУ по специальности переводчик-аналитик.</li>
+          <li> В свободное время проходит курсы от лучших университетов мира по эффективному преподаванию и методикам
+            написания
+            сочинений.</li>
+          <li>>В числе пройденных: English Grammar and Essay Writing (Berkeley), English Grammar&Style (The University of
+            Queesland),
+            How to Write an Essay (Berkeley), Academic and Business Writing (Berkeley), The Art of Teaching (GEMS education),
+            Powerful Tools for Teaching and Learning (University of Houston).</li>
+        </ul>
+        <a class="teacher-link" href="#">Cambrige English Entry Level Certificate</a>
+      </div>
 
-  <p>
-    Плагин
-    <a
-      href="https://github.com/posthtml/posthtml-include"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      posthtml-include
-    </a>
-    позволяет добавлять в HTML-файлы страниц код из других HTML-файлов
-    (фрагментов). Фрагменты хранятся в папке
-    <code>src/partials</code>. Добавление происходит при компиляции файлов
-    страниц, например <code>index.html</code>.
-  </p>
-
-  <p>
-    Этот файл <code>example.html</code> &mdash; пример такого фрагмента, с
-    разметкой определённой части главной страницы. Это очень удобно при
-    командной разработке на студенческих проектах, когда в одном HTML-файле
-    пишет несколько человек сразу.
-  </p>
-
-  <p>
-    Синтаксис добавление фрагмента в главный файл:
-    <code>
-      &lt;include src="./partials/имя-файла.html"&gt;&lt;/include&gt;
-    </code>
-  </p>
-</article>
+    </div>
+    
+</section>
