@@ -16,35 +16,31 @@
     background-image: url('../images/registration-form/back-mob-png2x.png');
   }
 
-  // @media screen and (min-width: 768px) and (max-width: 1199px) {
-  //   padding: 50px 40px 71px 40px;
-  //   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-  //     url('../images/registration-form/back-tablet-registration1x.jpg');
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding: 50px 40px 71px 40px;
+    background-image: url('../images/registration-form/back-tablet-png1x.png');
 
-  //   @media screen and (min-device-pixel-ratio: 2),
-  //     screen and (-webkit-min-device-pixel-ratio: 2),
-  //     screen and (-o-min-device-pixel-ratio: 2/1),
-  //     screen and (min-resolution: 192dpi),
-  //     screen and (min-resolution: 2dppx) {
-  //     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-  //       url('../images/registration-form/back-tablet-registration2x.jpg');
-  //   }
-  // }
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url('../images/registration-form/back-tablet-png2x.png');
+    }
+  }
 
-  // @media screen and (min-width: 1200px) {
-  //   padding: 100px 295px 62px 295px;
-  //   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-  //     url('../images/registration-form/back-desktop-registration1x.jpg');
+  @media screen and (min-width: 1200px) {
+    padding: 100px 295px 62px 295px;
+    background-image: url('../images/registration-form/back-desktop-png1x.png');
 
-  //   @media screen and (min-device-pixel-ratio: 2),
-  //     screen and (-webkit-min-device-pixel-ratio: 2),
-  //     screen and (-o-min-device-pixel-ratio: 2/1),
-  //     screen and (min-resolution: 192dpi),
-  //     screen and (min-resolution: 2dppx) {
-  //     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-  //       url('../images/registration-form/back-desktop-registration2x.jpg');
-  //   }
-  // }
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url('../images/registration-form/back-desktop-png2x.png');
+    }
+  }
 }
 
 .registration__form {
