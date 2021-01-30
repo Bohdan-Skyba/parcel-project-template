@@ -117,83 +117,18 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
-
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
-
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"sass/main.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"C:\\Data\\Mega\\GIT\\zero-team1\\src\\images\\hero\\img-02-hero-320.png":[["img-02-hero-320.41ff7180.png","images/hero/img-02-hero-320.png"],"images/hero/img-02-hero-320.png"],"C:\\Data\\Mega\\GIT\\zero-team1\\src\\images\\hero\\img-01-hero-320.png":[["img-01-hero-320.572a30ca.png","images/hero/img-01-hero-320.png"],"images/hero/img-01-hero-320.png"],"C:\\Data\\Mega\\GIT\\zero-team1\\src\\images\\hero\\img-02-hero-320@2x.png":[["img-02-hero-320@2x.cd494897.png","images/hero/img-02-hero-320@2x.png"],"images/hero/img-02-hero-320@2x.png"],"C:\\Data\\Mega\\GIT\\zero-team1\\src\\images\\hero\\img-01-hero-320@2x.png":[["img-01-hero-320@2x.115ab69c.png","images/hero/img-01-hero-320@2x.png"],"images/hero/img-01-hero-320@2x.png"],"C:\\Data\\Mega\\GIT\\zero-team1\\src\\images\\hero\\img-bg-320.png":[["img-bg-320.c1941f7f.png","images/hero/img-bg-320.png"],"images/hero/img-bg-320.png"],"C:\\Data\\Mega\\GIT\\zero-team1\\src\\images\\hero\\img-bg-320@2x.png":[["img-bg-320@2x.606d8162.png","images/hero/img-bg-320@2x.png"],"images/hero/img-bg-320@2x.png"],"C:\\Data\\Mega\\GIT\\zero-team1\\src\\images\\hero\\img-02-hero-768.png":[["img-02-hero-768.569b3409.png","images/hero/img-02-hero-768.png"],"images/hero/img-02-hero-768.png"],"C:\\Data\\Mega\\GIT\\zero-team1\\src\\images\\hero\\img-01-hero-768.png":[["img-01-hero-768.6c547b60.png","images/hero/img-01-hero-768.png"],"images/hero/img-01-hero-768.png"],"C:\\Data\\Mega\\GIT\\zero-team1\\src\\images\\hero\\img-02-hero-768@2x.png":[["img-02-hero-768@2x.98681928.png","images/hero/img-02-hero-768@2x.png"],"images/hero/img-02-hero-768@2x.png"],"C:\\Data\\Mega\\GIT\\zero-team1\\src\\images\\hero\\img-01-hero-768@2x.png":[["img-01-hero-768@2x.a90bf390.png","images/hero/img-01-hero-768@2x.png"],"images/hero/img-01-hero-768@2x.png"],"C:\\Data\\Mega\\GIT\\zero-team1\\src\\images\\hero\\img-bg-768.png":[["img-bg-768.288550a6.png","images/hero/img-bg-768.png"],"images/hero/img-bg-768.png"],"C:\\Data\\Mega\\GIT\\zero-team1\\src\\images\\hero\\img-bg-768@2x.png":[["img-bg-768@2x.5986ec8d.png","images/hero/img-bg-768@2x.png"],"images/hero/img-bg-768@2x.png"],"C:\\Data\\Mega\\GIT\\zero-team1\\src\\images\\hero\\img-bg-1344.png":[["img-bg-1344.a1750412.png","images/hero/img-bg-1344.png"],"images/hero/img-bg-1344.png"],"C:\\Data\\Mega\\GIT\\zero-team1\\src\\images\\hero\\img-bg-1344@2x.png":[["img-bg-1344@2x.55270b5b.png","images/hero/img-bg-1344@2x.png"],"images/hero/img-bg-1344@2x.png"],"C:\\Data\\Mega\\GIT\\zero-team1\\src\\images\\hero\\img-02-hero-1344.png":[["img-02-hero-1344.419b7fae.png","images/hero/img-02-hero-1344.png"],"images/hero/img-02-hero-1344.png"],"C:\\Data\\Mega\\GIT\\zero-team1\\src\\images\\hero\\img-01-hero-1344.png":[["img-01-hero-1344.24930601.png","images/hero/img-01-hero-1344.png"],"images/hero/img-01-hero-1344.png"],"C:\\Data\\Mega\\GIT\\zero-team1\\src\\images\\hero\\img-02-hero-1344@2x.png":[["img-02-hero-1344@2x.d0bf9d1a.png","images/hero/img-02-hero-1344@2x.png"],"images/hero/img-02-hero-1344@2x.png"],"C:\\Data\\Mega\\GIT\\zero-team1\\src\\images\\hero\\img-01-hero-1344@2x.png":[["img-01-hero-1344@2x.3a009af6.png","images/hero/img-01-hero-1344@2x.png"],"images/hero/img-01-hero-1344@2x.png"],"C:\\Data\\Mega\\GIT\\zero-team1\\src\\icons\\logo-mob.svg":[["logo-mob.27c41e25.svg","icons/logo-mob.svg"],"icons/logo-mob.svg"],"C:\\Data\\Mega\\GIT\\zero-team1\\src\\icons\\logo-mob-white.svg":[["logo-mob-white.512d98e2.svg","icons/logo-mob-white.svg"],"icons/logo-mob-white.svg"],"C:\\Data\\Mega\\GIT\\zero-team1\\src\\icons\\logo-big-white.svg":[["logo-big-white.0ab6928d.svg","icons/logo-big-white.svg"],"icons/logo-big-white.svg"],"C:\\Data\\Mega\\GIT\\zero-team1\\src\\icons\\logo-big.svg":[["logo-big.fff87073.svg","icons/logo-big.svg"],"icons/logo-big.svg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
-"use strict";
-
-require("./sass/main.scss");
-},{"./sass/main.scss":"sass/main.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+})({"js/menu.js":[function(require,module,exports) {
+(function () {
+  var menuBtnRef = document.querySelector('[data-menu-button]');
+  var mobileMenuRef = document.querySelector('[data-menu]');
+  menuBtnRef.addEventListener('click', function () {
+    var expanded = menuBtnRef.getAttribute('aria-expanded') === 'true' || false;
+    menuBtnRef.classList.toggle('is-open');
+    menuBtnRef.setAttribute('aria-expanded', !expanded);
+    mobileMenuRef.classList.toggle('is-open');
+  });
+})();
+},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -397,5 +332,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
-//# sourceMappingURL=/src.e31bb0bc.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/menu.js"], null)
+//# sourceMappingURL=/menu.0c91648c.js.map
