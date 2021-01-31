@@ -1057,8 +1057,6 @@ textarea {
   }
 }
 .hero__title {
-  animation: blur 0.75s ease-out infinite;
-  color: #111518;
   font-weight: 800;
   font-size: 20px;
   line-height: 27px;
