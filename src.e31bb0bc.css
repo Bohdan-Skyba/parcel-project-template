@@ -302,28 +302,30 @@ textarea {
   margin: 0 auto;
   width: 280px;
   height: 280px;
-  padding-top: 30px;
-  padding-bottom: 25px;
-  padding-left: 5px;
-  padding-right: 5px;
   background-color: #ffffff;
   box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
+}
+
+.advantages-list__link {
+  display: block;
+  padding: 30px 5px 25px 5px;
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.advantages-list__item:focus, .advantages-list__item:hover {
+.advantages-list__link:focus, .advantages-list__link:hover {
   background-color: #ff6b09;
+  cursor: pointer;
 }
-.advantages-list__item:focus .advantages-list__icon, .advantages-list__item:hover .advantages-list__icon {
+.advantages-list__link:focus .advantages-list__icon, .advantages-list__link:hover .advantages-list__icon {
   fill: #ffffff;
 }
-.advantages-list__item:focus .advantages-list__title,
-.advantages-list__item:focus .advantage-list__text, .advantages-list__item:hover .advantages-list__title,
-.advantages-list__item:hover .advantage-list__text {
+.advantages-list__link:focus .advantages-list__title,
+.advantages-list__link:focus .advantage-list__text, .advantages-list__link:hover .advantages-list__title,
+.advantages-list__link:hover .advantage-list__text {
   color: #ffffff;
 }
-.advantages-list__item:focus .advantages-list__title::after, .advantages-list__item:hover .advantages-list__title::after {
+.advantages-list__link:focus .advantages-list__title::after, .advantages-list__link:hover .advantages-list__title::after {
   background-color: #ffffff;
 }
 
@@ -397,10 +399,11 @@ textarea {
   .advantages-list__item {
     width: 334px;
     height: 334px;
-    padding-top: 40px;
-    padding-bottom: 25px;
-    padding-left: 20px;
-    padding-right: 20px;
+  }
+
+  .advantages-list__link {
+    padding: 40px 20px 25px 20px;
+    height: 334px;
   }
 
   .advantages-list__icon {
@@ -412,7 +415,7 @@ textarea {
     margin-bottom: 22px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1344px) {
+@media screen and (min-width: 768px) and (max-width: 1343px) {
   .advantages-list__item:nth-child(2n+1) {
     margin-right: 20px;
   }
@@ -433,15 +436,19 @@ textarea {
   .advantages-list__item {
     width: 424px;
     height: 396px;
-    padding-bottom: 55px;
-    padding-left: 30px;
-    padding-right: 30px;
   }
   .advantages-list__item:not(:nth-child(3n)) {
     margin-right: 20px;
   }
   .advantages-list__item:not(:nth-child(n+4)) {
     margin-bottom: 20px;
+  }
+
+  .advantages-list__link {
+    height: 396px;
+    padding-bottom: 55px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   .advantages-list__title {
@@ -495,6 +502,7 @@ textarea {
 .clients__icon {
   display: block;
   margin-bottom: 20px;
+  margin-top: 20px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -517,7 +525,7 @@ textarea {
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
-  line-height: 15px;
+  line-height: 1.25;
   text-align: center;
   letter-spacing: 0.08em;
   color: #b9b9b9;
@@ -532,10 +540,6 @@ textarea {
   line-height: 1.667;
   text-align: center;
   color: #3d3d3d;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 17px;
-  letter-spacing: 0.08em;
 }
 
 .clients__text-box {
@@ -606,14 +610,9 @@ textarea {
     display: flex;
   }
 
-  .clients__top-part {
-    display: flex;
-  }
-
   .clients__top {
     display: flex;
     align-items: center;
-    height: 313px;
   }
 
   .clients__icon {
@@ -636,13 +635,14 @@ textarea {
   .clients__second-description {
     width: 412px;
     text-align: left;
-    margin-bottom: 40px;
-    padding-bottom: 30px;
+    margin-right: 40px;
+    padding-bottom: 0;
   }
 
   .clients__top-part {
-    margin-left: 27px;
-    margin-right: 27px;
+    display: flex;
+    padding: 40px;
+    width: 688px;
   }
 
   .clients__item-none {
@@ -659,6 +659,16 @@ textarea {
   .clients__item:not(:last-child) {
     margin-right: 30px;
   }
+
+  .clients__icon-other-left-line {
+    position: absolute;
+    left: 40px;
+  }
+
+  .clients__icon-other-right-line {
+    position: absolute;
+    right: 40px;
+  }
 }
 @media screen and (max-width: 767px) {
   .clients__icon-other-left-line,
@@ -669,7 +679,7 @@ textarea {
 @media screen and (min-width: 1344px) {
   .clients__title {
     font-size: 46px;
-    margin-bottom: 100px;
+    margin-bottom: 91px;
   }
 
   .clients__name-title {
@@ -679,9 +689,10 @@ textarea {
 
   .clients__top-part {
     width: 1090px;
-    margin-left: 58px;
-    margin-right: 58px;
-    margin-bottom: 40px;
+    padding-top: 8px;
+    padding-right: 97px;
+    padding-bottom: 93px;
+    padding-left: 97px;
   }
 
   .clients__top {
@@ -690,18 +701,7 @@ textarea {
 
   .clients__second-description {
     text-align: left;
-    margin-bottom: 40px;
-  }
-
-  .clients__second-description {
-    width: 412px;
-    text-align: left;
-    margin-bottom: 40px;
-  }
-
-  .clients__second-description {
     width: 706px;
-    margin-bottom: 51px;
     padding-bottom: 0;
     font-size: 18px;
     line-height: 1.556;
@@ -709,7 +709,6 @@ textarea {
 
   .clients__left-side {
     margin-right: 40px;
-    margin-left: 82px;
   }
 
   .clients__name-title {
@@ -723,16 +722,16 @@ textarea {
     line-height: 1.25;
   }
 
-  .clients__icon {
-    margin-top: 20px;
-  }
-
   .clients__top {
     justify-content: center;
   }
 
   .clients__right-side {
     width: 706px;
+  }
+
+  .clients__bottom-part {
+    margin-top: 0;
   }
 }
 .features {
@@ -808,9 +807,13 @@ textarea {
     margin-right: 17px;
   }
 }
+.features {
+  padding-top: 50px;
+}
+
 @media screen and (min-width: 1344px) {
   .features {
-    padding-top: 95.5px;
+    padding-top: 200px;
   }
 
   .features_list {
@@ -2430,17 +2433,10 @@ textarea {
   margin-top: 21px;
   transform: translateX(-25px);
 }
-.teacher-skill li::before {
-  content: "";
-  width: 17px;
-  height: 14px;
-  margin-right: 9px;
-  display: inline-block;
-  background-image: url("/teacher-vector.a1a7a8cc.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-}
 
+.teacher-skill-item {
+  display: flex;
+}
 .teacher-skill-item span {
   display: inline-block;
   width: 253px;
@@ -2468,6 +2464,13 @@ textarea {
 .teacher-img {
   display: block;
   width: 243px;
+  height: 306px;
+}
+
+.teacher__svg {
+  width: 17px;
+  height: 14px;
+  margin-right: 9px;
 }
 
 @media screen and (max-width: 767px) {
@@ -2520,15 +2523,19 @@ textarea {
     content: "";
     margin-top: 31px;
   }
-  .teacher-skill li::before {
-    content: "";
-    width: 24px;
-    height: 20px;
-    margin-right: 35px;
-  }
   .teacher-skill li:last-child ::after {
     content: "";
     transform: translateX(-60px);
+  }
+
+  .teacher-skill-item span {
+    width: 530px;
+  }
+
+  .teacher__svg {
+    width: 24px;
+    height: 20px;
+    margin-right: 35px;
   }
 
   .teacher-link,
@@ -2539,10 +2546,7 @@ textarea {
 
   .teacher-img {
     width: 530px;
-  }
-
-  .teacher-skill-item span {
-    width: 530px;
+    height: 667px;
   }
 }
 
