@@ -1771,11 +1771,11 @@ textarea {
   display: block;
   width: 120px;
   height: 137px;
-  background-image: url(/our-programmimg.d41bac9c.jpg);
+  background-image: url(/our-programmimg.1202f2d4.png);
 }
 @media screen and (min-width: 768px) and (max-width: 1343px) {
   .our-programm__img {
-    background-image: url(/our-programmimgtabl.b82d5d45.jpg);
+    background-image: url(/our-programmimgtabl.c64f166c.png);
     width: 384px;
     height: 280px;
     bottom: -80px;
@@ -1784,7 +1784,7 @@ textarea {
 }
 @media screen and (min-width: 1344px) {
   .our-programm__img {
-    background-image: url(/our-programmimgdesk.da7b6869.jpg);
+    background-image: url(/our-programmimgdesk.6227ca1d.png);
     width: 680px;
     height: 502px;
     bottom: -258px;
