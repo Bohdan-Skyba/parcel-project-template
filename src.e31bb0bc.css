@@ -907,8 +907,8 @@ textarea {
 }
 .general-problem-content > ul > li > h3 {
   font-weight: bold;
-  font-size: 20px;
-  line-height: 1.2;
+  font-size: 14px;
+  line-height: 1.2192857143;
   text-align: left;
   letter-spacing: 0.06em;
   color: #ff6b09;
@@ -1622,6 +1622,15 @@ textarea {
   .our-programm-section {
     height: 1570px;
   }
+  .our-programm-section::before {
+    position: absolute;
+    content: " ";
+    top: 278px;
+    height: 1px;
+    width: 100vw;
+    background-color: #fff;
+    z-index: 0;
+  }
 
   .dop-contener {
     height: 1237px;
@@ -1784,6 +1793,11 @@ textarea {
   }
 }
 
+@media screen and (min-width: 1344px) {
+  .vl {
+    display: none;
+  }
+}
 .footer__contacts {
   padding: 30px 0;
   background-color: #ffffff;
